@@ -1,22 +1,18 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import getDataFromApi from "../services/getDataFromApi";
+import CharacterList from "./CharacterList";
 import "../styleSheets/App.scss";
 
 function App() {
+  const [characters, setCharacters] = useState([]);
+
+  useEffect(() => {
+    getDataFromApi().then((data) => setCharacters(data));
+  }, []);
   return (
     <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code></code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1 className="title">rick and morty</h1>
+      <CharacterList characters={characters} />
     </div>
   );
 }
