@@ -1,9 +1,11 @@
+import { Link } from "react-router-dom";
 const CharacterNoFound = () => {
   return (
     <>
-      <p className="noFound">
-        No hay ningún personaje que coincida con la palabra buscada.
-      </p>
+      <Link to={"/"} className="returnBtn">
+        Volver
+      </Link>
+      <p className="noFound">Página no encontrada</p>
     </>
   );
 };

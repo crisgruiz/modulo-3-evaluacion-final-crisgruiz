@@ -8,7 +8,7 @@ const Filters = (props) => {
   return (
     <section>
       <form className="form" action="" onSubmit={handleSubmit}>
-        <FilterByName handleFilter={props.handleFilter} />
+        <FilterByName handleFilter={props.handleFilter} value={props.value} />
       </form>
     </section>
   );
