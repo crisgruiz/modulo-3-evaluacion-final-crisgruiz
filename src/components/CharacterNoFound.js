@@ -1,12 +1,13 @@
+import "../styleSheets/CharacterNoFound.scss";
 import { Link } from "react-router-dom";
 const CharacterNoFound = () => {
   return (
-    <>
-      <Link to={"/"} className="returnBtn">
+    <section className="noPage">
+      <Link to={"/"} className="noPage__returnBtn">
         Volver
       </Link>
-      <p className="noFound">Página no encontrada</p>
-    </>
+      <p className="noPage__text">Página no encontrada</p>
+    </section>
   );
 };
 export default CharacterNoFound;

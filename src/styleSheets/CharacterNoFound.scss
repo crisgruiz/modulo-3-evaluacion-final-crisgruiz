@@ -1,0 +1,23 @@
+.noPage {
+  width: 100%;
+  margin-top: 150px;
+
+  &__returnBtn {
+    padding: 8px 30px;
+    // height: 30px;
+    // width: 100px;
+    color: #02b1c8;
+    font-family: "Roboto", serif;
+    font-weight: bold;
+    font-size: 20px;
+    border: 0;
+    border-radius: 10px;
+    background-color: #5ba547de;
+    text-decoration: none;
+  }
+  &__text {
+    margin-top: 50px;
+    font-family: "Roboto", serif;
+    font-size: 20px;
+  }
+}

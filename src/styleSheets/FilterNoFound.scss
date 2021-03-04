@@ -1,0 +1,20 @@
+.noFound {
+  width: 100%;
+  margin-top: 150px;
+  &__returnBtn {
+    margin-bottom: 20px;
+    height: 30px;
+    width: 100px;
+    color: #02b1c8;
+    font-family: "Roboto", serif;
+    font-weight: bold;
+    font-size: 20px;
+    border: 0;
+    border-radius: 10px;
+    background-color: #5ba547de;
+  }
+  &__text {
+    font-family: "Roboto", serif;
+    font-size: 20px;
+  }
+}
