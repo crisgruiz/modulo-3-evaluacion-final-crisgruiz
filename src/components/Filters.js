@@ -1,3 +1,4 @@
+import "../styleSheets/FilterByName.scss";
 import FilterByName from "./FilterByName";
 
 const Filters = (props) => {

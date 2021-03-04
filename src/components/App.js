@@ -59,13 +59,17 @@ const App = () => {
   };
 
   return (
-    <div className="App">
-      <img src={logo} alt="Rick and Morty" className="logo" />
-      <Switch>
-        <Route exact path="/" render={renderCharacterList} />
-        <Route path="/CharacterDetail/:id" render={renderDetail} />
-      </Switch>
-    </div>
+    <>
+      <header className="header">
+        <img src={logo} alt="Rick and Morty" className="header__logo" />
+      </header>
+      <div className="App">
+        <Switch>
+          <Route exact path="/" render={renderCharacterList} />
+          <Route path="/CharacterDetail/:id" render={renderDetail} />
+        </Switch>
+      </div>
+    </>
   );
 };
 
