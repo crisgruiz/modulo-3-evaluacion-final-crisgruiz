@@ -1,4 +1,5 @@
-import "../styleSheets/CharacterList.scss";
+import "../styleSheets/layout/CharacterList.scss";
+import PropTypes from "prop-types";
 
 import React from "react";
 import CharacterCard from "./CharacterCard";
@@ -21,5 +22,9 @@ class CharacterList extends React.Component {
     );
   }
 }
+
+CharacterList.propTypes = {
+  characters: PropTypes.array,
+};
 
 export default CharacterList;

@@ -1,9 +1,17 @@
-import "../styleSheets/CharacterCard.scss";
+import "../styleSheets/layout/CharacterCard.scss";
 import death from "../images/death.png";
-
+import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
 const CharacterCard = (props) => {
+  const statusIcon = () => {
+    if (props.character.status !== "Dead") {
+      return "";
+    } else {
+      return <img className="card__state--icon" src={death} alt="dead" />;
+    }
+  };
+
   return (
     <Link
       to={`/CharacterDetail/${props.character.id}`}
@@ -11,13 +19,7 @@ const CharacterCard = (props) => {
     >
       <article className="card">
         <div className="title">
-          <p className="card__state">
-            {props.character.status !== "Dead" ? (
-              ""
-            ) : (
-              <img className="card__state--icon" src={death} alt="dead" />
-            )}
-          </p>
+          <p className="card__state">{statusIcon()}</p>
           <h2 className="card__name">{props.character.name}</h2>
         </div>
         <img
@@ -30,4 +32,12 @@ const CharacterCard = (props) => {
     </Link>
   );
 };
+
+CharacterCard.propTypes = {
+  name: PropTypes.string,
+  image: PropTypes.string,
+  specie: PropTypes.string,
+  id: PropTypes.number,
+};
+
 export default CharacterCard;

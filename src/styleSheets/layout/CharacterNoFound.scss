@@ -1,24 +1,31 @@
+@import "../core/core";
+
 .noPage {
   width: 100%;
   margin-top: 150px;
 
   &__returnBtn {
+    margin-bottom: 40px;
+    height: 30px;
+    width: 100px;
     padding: 8px 30px;
-    // height: 30px;
-    // width: 100px;
-    color: #02b1c8;
-    font-family: "Roboto", serif;
+    color: $mainText;
+    font-family: $font-text;
     font-weight: bold;
     font-size: 20px;
     border: 0;
     border-radius: 10px;
-    background-color: #5ba547de;
+    background-color: $backgroundBtn;
     box-shadow: 7px 7px 5px #d1d1d1;
     text-decoration: none;
+    @include tablet {
+      font-size: 20px;
+    }
   }
   &__text {
     margin-top: 50px;
-    font-family: "Roboto", serif;
+    font-family: $font-text;
     font-size: 20px;
+    color: $mainText;
   }
 }

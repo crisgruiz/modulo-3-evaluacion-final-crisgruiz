@@ -1,3 +1,4 @@
+@import "../core/core";
 .cardsContainer {
   display: flex;
   flex-direction: column;
@@ -10,22 +11,23 @@
     justify-content: center;
     align-items: center;
     &--element {
-      border: black 2px solid;
+      border: $borderDetailCard 2px solid;
       margin: 10px 20px;
       padding: 15px 0;
       list-style-type: none;
-      width: 250px;
+      width: 200px;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      font-family: "Roboto", serif;
+      font-family: $font-text;
       text-transform: capitalize;
       border-radius: 15px;
-      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
-        0 10px 10px rgba(0, 0, 0, 0.22);
-      background-color: #5ba54785;
-      box-shadow: 7px 7px 5px #d1d1d1;
+      background-color: $backgroundDetailCard;
+      box-shadow: 7px 7px 5px #02b1c8;
+      @include tablet {
+        width: 250px;
+      }
     }
   }
 }

@@ -1,0 +1,49 @@
+@import "../core/core";
+
+.characterLink {
+  text-decoration: none;
+}
+.title {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  color: $mainText;
+  &__name {
+    font-size: 14px;
+    @include tablet {
+      font-size: 18px;
+    }
+  }
+  &__image {
+    width: 120px;
+    border: 2px solid $borderImage;
+    border-radius: 100%;
+    margin: 15px 0;
+    @include tablet {
+      width: 150px;
+      border: 3px solid $borderImage;
+    }
+  }
+  &__specie {
+    font-size: 14px;
+    @include tablet {
+      font-size: 18px;
+    }
+  }
+  &__state {
+    &--icon {
+      width: 25px;
+      margin-right: 10px;
+      border: $borderDeathIcon 1px solid;
+      border-radius: 100%;
+      padding: 2px;
+      background-color: $backgroundDeathIcon;
+      @include tablet {
+        width: 30px;
+      }
+    }
+  }
+}

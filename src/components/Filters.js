@@ -1,5 +1,6 @@
-import "../styleSheets/FilterByName.scss";
+import "../styleSheets/layout/FilterByName.scss";
 import FilterByName from "./FilterByName";
+import PropTypes from "prop-types";
 
 const Filters = (props) => {
   const handleSubmit = (ev) => {
@@ -14,4 +15,10 @@ const Filters = (props) => {
     </section>
   );
 };
+
+Filters.propTypes = {
+  value: PropTypes.string,
+  handleFilter: PropTypes.func,
+};
+
 export default Filters;

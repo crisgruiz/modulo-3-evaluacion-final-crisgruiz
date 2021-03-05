@@ -1,3 +1,5 @@
+@import "../core/core";
+
 .detailContainer {
   display: flex;
   flex-direction: column;
@@ -9,54 +11,59 @@
   padding-top: 3px;
   height: 30px;
   width: 100px;
-  color: #02b1c8;
+  color: $mainText;
   text-decoration: none;
-  font-family: "Roboto", serif;
+  font-family: $font-text;
   font-weight: bold;
   font-size: 20px;
   border: 0;
   border-radius: 10px;
-  background-color: #5ba547de;
+  background-color: $backgroundBtn;
   box-shadow: 7px 7px 5px #d1d1d1;
 }
-.title {
+.Cardtitle {
   display: flex;
   flex-direction: row;
+  justify-content: flex-start;
   align-items: center;
 }
 .detailCard {
-  border: black 2px solid;
+  border: $borderDetailCard 2px solid;
   margin: 30px 20px;
   padding: 15px 0;
   width: 250px;
   border-radius: 15px;
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-  background-color: #5ba54785;
-  box-shadow: 7px 7px 5px #d1d1d1;
+  background-color: $backgroundDetailCard;
+  box-shadow: 7px 7px 5px #02b1c8;
   text-align: center;
   &__image {
     width: 150px;
-    border: 3px solid #02b1c8;
+    border: 3px solid $borderImage;
     border-radius: 100%;
+    margin: 10px 0;
   }
   &__text {
-    font-family: "Roboto", serif;
-    font-size: 10px;
+    font-family: $font-text;
+    font-size: 12px;
     text-transform: capitalize;
     text-align: start;
     padding-left: 25px;
     &--name {
-      font-size: 20px;
+      font-size: 25px;
+      margin: 10px 0;
+    }
+    &--info {
+      margin-bottom: 5px;
     }
   }
   &__state {
     &--icon {
       width: 30px;
       margin-left: 30px;
-      border: white 1px solid;
+      border: $borderDeathIcon 1px solid;
       border-radius: 100%;
       padding: 2px;
-      background-color: rgba(255, 255, 255, 0.589);
+      background-color: $backgroundDeathIcon;
     }
   }
 }

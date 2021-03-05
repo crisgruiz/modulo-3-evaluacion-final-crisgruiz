@@ -1,4 +1,5 @@
-import "../styleSheets/FilterNoFound.scss";
+import "../styleSheets/layout/FilterNoFound.scss";
+import PropTypes from "prop-types";
 
 const FilterNoFound = (props) => {
   return (
@@ -11,5 +12,9 @@ const FilterNoFound = (props) => {
       </p>
     </section>
   );
+};
+
+FilterNoFound.propTypes = {
+  handleReturn: PropTypes.func,
 };
 export default FilterNoFound;

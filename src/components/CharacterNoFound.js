@@ -1,5 +1,6 @@
-import "../styleSheets/CharacterNoFound.scss";
+import "../styleSheets/layout/CharacterNoFound.scss";
 import { Link } from "react-router-dom";
+
 const CharacterNoFound = () => {
   return (
     <section className="noPage">
@@ -10,4 +11,5 @@ const CharacterNoFound = () => {
     </section>
   );
 };
+
 export default CharacterNoFound;
