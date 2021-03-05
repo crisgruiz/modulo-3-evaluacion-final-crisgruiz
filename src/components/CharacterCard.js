@@ -1,4 +1,5 @@
 import "../styleSheets/CharacterCard.scss";
+import death from "../images/death.png";
 
 import { Link } from "react-router-dom";
 
@@ -9,7 +10,16 @@ const CharacterCard = (props) => {
       className="characterLink"
     >
       <article className="card">
-        <h2 className="card__name">{props.character.name}</h2>
+        <div className="title">
+          <p className="card__state">
+            {props.character.status !== "Dead" ? (
+              ""
+            ) : (
+              <img className="card__state--icon" src={death} alt="dead" />
+            )}
+          </p>
+          <h2 className="card__name">{props.character.name}</h2>
+        </div>
         <img
           src={props.character.image}
           alt={props.character.name}
