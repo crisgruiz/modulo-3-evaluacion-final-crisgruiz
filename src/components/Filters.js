@@ -1,5 +1,6 @@
-import "../styleSheets/layout/FilterByName.scss";
+import "../styleSheets/layout/Filter.scss";
 import FilterByName from "./FilterByName";
+import FilterBySpecies from "./FilterBySpecies";
 import PropTypes from "prop-types";
 
 const Filters = (props) => {
@@ -11,6 +12,10 @@ const Filters = (props) => {
     <section>
       <form className="form" action="" onSubmit={handleSubmit}>
         <FilterByName handleFilter={props.handleFilter} value={props.value} />
+        <FilterBySpecies
+          handleFilter={props.handleFilter}
+          specie={props.specie}
+        />
       </form>
     </section>
   );

@@ -1,5 +1,5 @@
 @import "../core/core";
-.formName {
+.formSpecie {
   &__label {
     font-size: 16px;
     margin-right: 15px;
@@ -7,7 +7,7 @@
       font-size: 20px;
     }
   }
-  &__input-text {
+  &__input-select {
     height: 30px;
     width: 200px;
     padding-left: 5px;

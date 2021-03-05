@@ -13,6 +13,7 @@ import "../styleSheets/App.scss";
 const App = () => {
   const [characters, setCharacters] = useState([]);
   const [name, setName] = useState("");
+  const [specie, setSpecies] = useState("All");
 
   useEffect(() => {
     getDataFromApi().then((data) => setCharacters(data));
@@ -22,12 +23,18 @@ const App = () => {
   const handleFilter = (inputChange) => {
     if (inputChange.key === "name") {
       setName(inputChange.value);
+    } else if (inputChange.key === "species") {
+      setSpecies(inputChange.value);
     }
   };
 
-  const filterCharacters = characters.filter((character) => {
-    return character.name.toUpperCase().includes(name.toUpperCase());
-  });
+  const filterCharacters = characters
+    .filter((character) => {
+      return character.name.toUpperCase().includes(name.toUpperCase());
+    })
+    .filter((character) => {
+      return specie === "All" ? true : character.specie === specie;
+    });
 
   const handleReturn = () => {
     setName("");
