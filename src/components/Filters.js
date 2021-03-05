@@ -16,6 +16,10 @@ const Filters = (props) => {
           handleFilter={props.handleFilter}
           specie={props.specie}
         />
+        <button className="reset" type="reset" onClick={props.handleReset}>
+          <i className="far fa-trash-alt card__reset--icon"></i>
+          Reset
+        </button>
       </form>
     </section>
   );
@@ -24,6 +28,7 @@ const Filters = (props) => {
 Filters.propTypes = {
   value: PropTypes.string,
   handleFilter: PropTypes.func,
+  handleReset: PropTypes.func,
 };
 
 export default Filters;

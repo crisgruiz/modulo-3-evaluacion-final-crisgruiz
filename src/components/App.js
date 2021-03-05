@@ -15,11 +15,12 @@ const App = () => {
   const [name, setName] = useState("");
   const [specie, setSpecies] = useState("All");
 
+  //Llamamos a los datos de la API
   useEffect(() => {
     getDataFromApi().then((data) => setCharacters(data));
   }, []);
 
-  //Lo hago con if porque si luego quiero añadir el filtrado por especie, necesito diferenciar en la función sobre qué input estamos haciendo cambios. Si al final sólo hago un filtro no sería necesario
+  //Filtrado de datos según nombre y/o especie
   const handleFilter = (inputChange) => {
     if (inputChange.key === "name") {
       setName(inputChange.value);
@@ -36,8 +37,15 @@ const App = () => {
       return specie === "All" ? true : character.specie === specie;
     });
 
+  //Función asociada al botón de volver para limpiar los campos de filtrado
   const handleReturn = () => {
     setName("");
+    setSpecies("All");
+  };
+  //Botón de reset para limpiar los input
+  const handleReset = () => {
+    setName("");
+    setSpecies("All");
   };
 
   const renderCharacterList = () => {
@@ -46,7 +54,11 @@ const App = () => {
     } else {
       return (
         <>
-          <Filters handleFilter={handleFilter} value={name} />
+          <Filters
+            handleFilter={handleFilter}
+            handleReset={handleReset}
+            value={name}
+          />
           <CharacterList characters={filterCharacters} />
         </>
       );
@@ -61,7 +73,7 @@ const App = () => {
     if (selectCharacter) {
       return <CharacterDetail character={selectCharacter} />;
     } else {
-      return <CharacterNoFound />;
+      return <CharacterNoFound handleReset={handleReturn} />;
     }
   };
 
