@@ -1,4 +1,4 @@
-// import "../styleSheets/layout/FilterBySpecies.scss";
+import "../styleSheets/layout/FilterBySpecies.scss";
 import PropTypes from "prop-types";
 
 const FilterBySpecies = (props) => {
