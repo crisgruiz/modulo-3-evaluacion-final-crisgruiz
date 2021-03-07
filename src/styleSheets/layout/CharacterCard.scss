@@ -2,6 +2,10 @@
 
 .characterLink {
   text-decoration: none;
+  width: 200px;
+  @include tablet {
+    width: 250px;
+  }
 }
 .title {
   display: flex;

@@ -18,6 +18,7 @@
     background-color: $backgroundBtn;
     box-shadow: 7px 7px 5px #d1d1d1;
     text-decoration: none;
+    cursor: pointer;
     @include tablet {
       font-size: 20px;
     }

@@ -13,9 +13,8 @@
     &--element {
       border: $borderDetailCard 2px solid;
       margin: 10px 20px;
-      padding: 15px 0;
+      padding: 20px 0;
       list-style-type: none;
-      width: 200px;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -25,9 +24,6 @@
       border-radius: 15px;
       background-color: $backgroundDetailCard;
       box-shadow: 7px 7px 5px #02b1c8;
-      @include tablet {
-        width: 250px;
-      }
     }
   }
 }
