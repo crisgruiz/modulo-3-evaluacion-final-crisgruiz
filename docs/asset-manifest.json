@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "./static/css/main.f480d605.chunk.css",
-    "main.js": "./static/js/main.b93b44d5.chunk.js",
-    "main.js.map": "./static/js/main.b93b44d5.chunk.js.map",
+    "main.css": "./static/css/main.b61b1ef5.chunk.css",
+    "main.js": "./static/js/main.b11c85e1.chunk.js",
+    "main.js.map": "./static/js/main.b11c85e1.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.f565fb1b.js",
     "runtime-main.js.map": "./static/js/runtime-main.f565fb1b.js.map",
     "static/js/2.b8a21d27.chunk.js": "./static/js/2.b8a21d27.chunk.js",
     "static/js/2.b8a21d27.chunk.js.map": "./static/js/2.b8a21d27.chunk.js.map",
     "index.html": "./index.html",
-    "static/css/main.f480d605.chunk.css.map": "./static/css/main.f480d605.chunk.css.map",
+    "static/css/main.b61b1ef5.chunk.css.map": "./static/css/main.b61b1ef5.chunk.css.map",
     "static/js/2.b8a21d27.chunk.js.LICENSE.txt": "./static/js/2.b8a21d27.chunk.js.LICENSE.txt",
     "static/media/death.c4cdc5a2.png": "./static/media/death.c4cdc5a2.png",
     "static/media/logo.de13d484.png": "./static/media/logo.de13d484.png",
@@ -17,7 +17,7 @@
   "entrypoints": [
     "static/js/runtime-main.f565fb1b.js",
     "static/js/2.b8a21d27.chunk.js",
-    "static/css/main.f480d605.chunk.css",
-    "static/js/main.b93b44d5.chunk.js"
+    "static/css/main.b61b1ef5.chunk.css",
+    "static/js/main.b11c85e1.chunk.js"
   ]
 }

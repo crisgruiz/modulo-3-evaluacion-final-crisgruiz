@@ -6,9 +6,9 @@ const CharacterNoFound = (props) => {
   return (
     <section className="noPage">
       <Link to={"/"} className="noPage__returnBtn" onClick={props.handleReturn}>
-        Volver
+        Back
       </Link>
-      <p className="noPage__text">Página no encontrada</p>
+      <p className="noPage__text">Page not found</p>
     </section>
   );
 };

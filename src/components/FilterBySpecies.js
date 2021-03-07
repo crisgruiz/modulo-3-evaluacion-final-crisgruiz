@@ -12,7 +12,7 @@ const FilterBySpecies = (props) => {
   return (
     <div className="formSpecie">
       <label className="formSpecie__label" htmlFor="species">
-        Filtrar por especie:
+        Filter by specie:
       </label>
       <select
         className="formSpecie__input-select"

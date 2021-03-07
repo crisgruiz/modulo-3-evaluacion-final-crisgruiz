@@ -5,10 +5,10 @@ const FilterNoFound = (props) => {
   return (
     <section className="noFound">
       <button className="noFound__returnBtn" onClick={props.handleReturn}>
-        Volver
+        Back
       </button>
       <p className="noFound__text">
-        No hay ningún personaje que coincida con el criterio de búsqueda.
+        There aren't any character with this filter options.
       </p>
     </section>
   );

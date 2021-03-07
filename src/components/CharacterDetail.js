@@ -15,7 +15,7 @@ const CharacterDetail = (props) => {
   return (
     <section className="detailContainer">
       <Link to={"/"} className="returnBtn">
-        Volver
+        Back
       </Link>
       <section className="detailCard">
         <img

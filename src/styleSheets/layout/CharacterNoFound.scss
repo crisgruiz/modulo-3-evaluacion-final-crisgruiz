@@ -28,5 +28,8 @@
     font-family: $font-text;
     font-size: 20px;
     color: $mainText;
+    @include tablet {
+      font-size: 30px;
+    }
   }
 }
