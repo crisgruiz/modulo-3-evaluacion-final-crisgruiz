@@ -33,6 +33,7 @@ const App = () => {
     .filter((character) => {
       return character.name.toUpperCase().includes(name.toUpperCase());
     })
+    .sort((a, z) => (a.name > z.name ? 1 : a.name < z.name ? -1 : 0))
     .filter((character) => {
       return specie === "All" ? true : character.specie === specie;
     });
