@@ -14,6 +14,7 @@ const App = () => {
   const [characters, setCharacters] = useState([]);
   const [name, setName] = useState("");
   const [specie, setSpecies] = useState("All");
+  const [status, setStatus] = useState("All");
 
   //Llamamos a los datos de la API
   useEffect(() => {
@@ -26,6 +27,8 @@ const App = () => {
       setName(inputChange.value);
     } else if (inputChange.key === "species") {
       setSpecies(inputChange.value);
+    } else if (inputChange.key === "status") {
+      setStatus(inputChange.value);
     }
   };
 
@@ -36,17 +39,22 @@ const App = () => {
     .sort((a, z) => (a.name > z.name ? 1 : a.name < z.name ? -1 : 0))
     .filter((character) => {
       return specie === "All" ? true : character.specie === specie;
+    })
+    .filter((character) => {
+      return status === "All" ? true : character.status === status;
     });
 
   //Función asociada al botón de volver para limpiar los campos de filtrado
   const handleReturn = () => {
     setName("");
     setSpecies("All");
+    setStatus("All");
   };
   //Botón de reset para limpiar los input
   const handleReset = () => {
     setName("");
     setSpecies("All");
+    setStatus("All");
   };
 
   const renderCharacterList = () => {
@@ -59,6 +67,8 @@ const App = () => {
             handleFilter={handleFilter}
             handleReset={handleReset}
             value={name}
+            specie={specie}
+            status={status}
           />
           <CharacterList characters={filterCharacters} />
         </>

@@ -1,6 +1,7 @@
 import "../styleSheets/layout/Filter.scss";
 import FilterByName from "./FilterByName";
 import FilterBySpecies from "./FilterBySpecies";
+import FilterByStatus from "./FilterByStatus";
 import PropTypes from "prop-types";
 
 const Filters = (props) => {
@@ -15,6 +16,10 @@ const Filters = (props) => {
         <FilterBySpecies
           handleFilter={props.handleFilter}
           specie={props.specie}
+        />
+        <FilterByStatus
+          handleFilter={props.handleFilter}
+          status={props.status}
         />
         <button className="reset" type="reset" onClick={props.handleReset}>
           <i className="far fa-trash-alt card__reset--icon"></i>
